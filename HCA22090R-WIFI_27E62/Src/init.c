@@ -10,7 +10,9 @@
 //***************************************************************************
 void SYS_Init(void)
 {
-	Delay_ms(250);
+	Delay_ms(250);  // 250ms
+
+//  add zhushi by danghao 2020-03-08
 
 	P0M  	&=	0xbb;
 	P0M  	|=	0x28;
@@ -19,7 +21,7 @@ void SYS_Init(void)
 
 	P4M  	|=	0x60;
 	P4UR	=	0x00;
-	P4 		|=	0x60;
+	P4 	|=	0x60;
 
 	P5M  	&=	0xFB;
 	P5M  	|=	0x08;
@@ -29,7 +31,7 @@ void SYS_Init(void)
 	FGIE	=	0;
 	FUTXPEN	=	0;
 	FURXPEN	=	0;
-	if(BodeRate-9 == 0)			// 9600
+	if(BodeRate-9 == 0)	// 9600
 	{
 		URRX	&=	0XFd;
 		URRX	|=	0X05;
